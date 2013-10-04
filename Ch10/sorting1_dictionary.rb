@@ -1,4 +1,4 @@
-arr = ["a", "photo", "Image", "jpg", "gif", "movie", "sound", "Photo"]
+arr = ["a", "photo", "Image", "a", "Jpg", "gif", "Movie", "sound", "photo"]
 
 def sort arr #This warps recursive_sort
 	recursive_sort arr, []
@@ -12,7 +12,7 @@ def recursive_sort unsorted_arr, sorted_arr
 	smallest = unsorted_arr.pop
   still_unsorted = []
 	unsorted_arr.each do |a|
-		if (smallest.downcase > a)
+		if (smallest.downcase > a.downcase)
       still_unsorted << smallest
 			smallest = a 
     else
